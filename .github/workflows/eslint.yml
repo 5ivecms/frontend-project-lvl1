@@ -30,4 +30,6 @@ jobs:
           node-version: 14.15.4
 
       # Runs a single command using the runners shell
-      -  run: make lint
+      - name: npm install, build
+        run: make install
+        run: make lint
