@@ -6,8 +6,8 @@ const questionsLimit = 3;
 const questionPrefix = 'Question: ';
 
 const operators = ['+', '-', '*'];
-const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min)) + min;
-const getRandomOperator = () => operators[getRandomInt(0, operators.length)];
+const getRandomInt = (min, max) => Math.floor(Math.random() * (max + 1 - min)) + min;
+const getRandomOperator = () => operators[getRandomInt(0, operators.length - 1)];
 const readName = () => readlineSync.question('May I have your name? ');
 const readAnswer = () => readlineSync.question('Your answer: ');
 
