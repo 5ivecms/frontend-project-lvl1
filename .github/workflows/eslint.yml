@@ -32,5 +32,6 @@ jobs:
       # Runs a single command using the runners shell
       - name: npm install, build
         run: make install
+        
       - name: make lint
         run: make lint
