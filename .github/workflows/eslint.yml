@@ -27,7 +27,7 @@ jobs:
 
       - uses: actions/setup-node@v1
         with:
-          node-version: 14
+          node-version: 14.15.4
 
       # Runs a single command using the runners shell
       -  run: make lint
