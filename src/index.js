@@ -20,8 +20,10 @@ const startQuiz = (data) => {
   messages.customMessage(rules);
 
   let isFailed = false;
-  for (const [question, rightAnswer] of questions) {
-    messages.customMessage(question);
+  for (let i = 0; i < questions.length; i += 1) {
+    const question = questions[i];
+    const [questionTitle, rightAnswer] = question;
+    messages.customMessage(questionTitle);
     const answer = readAnswer();
     if (rightAnswer === answer) {
       messages.correctMessage();
