@@ -16,7 +16,8 @@ const startQuiz = (data) => {
   const name = readName();
   messages.helloMessage(name);
 
-  const [rules, ...questions] = data;
+  const rules = data.shift();
+  const questions = data;
   messages.customMessage(rules);
 
   let isFailed = false;
